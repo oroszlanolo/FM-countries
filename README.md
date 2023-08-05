@@ -38,7 +38,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/oroszlanolo/FM-countries](https://github.com/oroszlanolo/FM-countries)
-- Live Site URL: [https://github.com/oroszlanolo/FM-countries](https://github.com/oroszlanolo/FM-countries)
+- Live Site URL: [https://oroszlanolo.github.io/FM-countries](https://oroszlanolo.github.io/FM-countries)
 
 ## My process
 
