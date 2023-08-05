@@ -21,7 +21,7 @@
                 <p class="detail"><span>Languages: </span>{{getLanguages()}}</p>
             </div>
         </div>
-        <div class="border-countries">
+        <div class="border-countries" *ngIf="country.borders.length > 0">
             <p>Border Countries:</p>
             <div class="border-list">
                 <button *ngFor="let border of country.borders" (click)="selectCountry(border)">{{border}}</button>

@@ -1,5 +1,5 @@
 <nav>
-  <a class="home" href="/">Where in the world?</a>
+  <button class="home" (click)="goHome()">Where in the world?</button>
   <button class="theme-switch" (click)="toggleMode()">
     <span class="material-symbols-outlined" [ngClass]="currentMode == Mode.LIGHT ? '' : 'material-symbols-filled'">
       dark_mode
