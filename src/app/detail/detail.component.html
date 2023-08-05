@@ -1,0 +1,31 @@
+<div class="main-container">
+    <button (click)="goBack()">
+        <span class="material-symbols-outlined">
+            keyboard_backspace
+        </span>
+        Back</button>
+    <div *ngIf="country" class="details-container">
+        <img class="flag" src="{{country.flags.png}}" alt="{{country.flags.alt}}">
+        <div class="details-all">
+            <h1 class="name">{{country.name.common}}</h1>
+            <div class="details details-first">
+                <p class="detail"><span>Native Name: </span>{{getNativeName()}}</p>
+                <p class="detail"><span>Population: </span>{{country.population}}</p>
+                <p class="detail"><span>Region: </span>{{country.region}}</p>
+                <p class="detail"><span>Sub Region: </span>{{country.subregion}}</p>
+                <p class="detail"><span>Capital: </span>{{country.capital}}</p>
+            </div>
+            <div class="details details-second">
+                <p class="detail"><span>Top Level Domain: </span>{{country.tld}}</p>
+                <p class="detail"><span>Currencies: </span>{{getCurrencies()}}</p>
+                <p class="detail"><span>Languages: </span>{{getLanguages()}}</p>
+            </div>
+        </div>
+        <div class="border-countries">
+            <p>Border Countries:</p>
+            <div class="border-list">
+                <button *ngFor="let border of country.borders" (click)="selectCountry(border)">{{border}}</button>
+            </div>
+        </div>
+    </div>
+</div>

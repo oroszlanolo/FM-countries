@@ -1,0 +1,116 @@
+.main-container {
+    display: grid;
+    gap: 3rem;
+    padding: 3rem;
+    margin: auto;
+}
+
+.filter-bar {
+    --fs: .825rem;
+    --padding-block: 12px;
+    --padding-inline: 25px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: baseline;
+}
+
+.input-box {
+    background-color: var(--col-elements);
+    border-radius: .25rem;
+    box-shadow: var(--box-shadow);
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+    padding: var(--padding-block) 30px;
+    color: var(--col-text);
+}
+
+.input-box input {
+    color: var(--col-text);
+    background: transparent;
+    border: none;
+    width: 100%;
+    font-size: var(--fs);
+}
+
+.input-box input:is(:hover, :focus) {
+    border: none;
+    outline: none;
+}
+
+.dropdown {
+    --border-radius: .25rem;
+    width: 15rem;
+    font-size: var(--fs);
+    font-weight: 600;
+    position: relative;
+}
+.dropdown-controller {
+    width: 100%;
+    padding: var(--padding-block) var(--padding-inline);
+    color: var(--col-text);
+    background-color: var(--col-elements);
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.options {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    transform: translateY(100%) translateY(.325rem);
+    display: flex;
+    flex-direction: column;
+    color: var(--col-text);
+    background-color: var(--col-elements);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+
+}
+
+.option {
+    color: var(--col-text);
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 0.5rem var(--padding-inline);
+    cursor: pointer;
+}
+.option:first-child {
+    padding-top: 1rem;
+}
+.option:last-child {
+    padding-bottom: 1rem;
+}
+.option:hover, .option:focus {
+    background-color: var(--col-bg);
+}
+
+@media(min-width: 850px) {
+    .filter-bar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 3rem;
+        --fs: 1rem;
+        --padding-block: 15px;
+    }
+    .input-box {
+        width: min(30rem, 100%);
+    }
+    
+    .main-container {
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

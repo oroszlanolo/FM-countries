@@ -1,0 +1,9 @@
+<section class="card" (click)="doClick($event)">
+    <img class="flag" src="{{country.flags.png}}" alt="{{country.flags.alt}}">
+    <div class="details">
+        <h2 class="name">{{country.name.common}}</h2>
+        <p class="row"><span class="row-title">Population:</span> {{country.population}}</p>
+        <p class="row"><span class="row-title">Region:</span> {{country.region}}</p>
+        <p class="row"><span class="row-title">Capital:</span> {{country.capital}}</p>
+    </div>
+</section>

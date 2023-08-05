@@ -1,0 +1,25 @@
+<div class="filter-bar">
+    <div class="input-box">
+        <span class="material-symbols-outlined">
+        search
+        </span>
+        <input type="text" name="search" id="search"
+            placeholder="Search for a country..."
+            [(ngModel)]="searchText"
+            (keyup.enter)="doSearch()">
+    </div>
+    <div class="dropdown">
+        <button (click)="toggleDropdown()" class="dropdown-controller">
+            {{filter ? (filter | titlecase) : 'Filter by Region'}}
+            <span class="material-symbols-outlined">
+                expand_more
+                </span>
+        </button>
+        <div class="options" *ngIf="showDropdown">
+            <button class="option" *ngFor="let region of regions" (click)="doFilter(region)">{{region | titlecase}}</button>
+        </div>
+    </div>
+</div>
+<div class="main-container">
+    <app-country-card *ngFor="let country of countries" [country]="country" (click)="selectCountry(country.cca3)"></app-country-card>
+</div>

@@ -1,0 +1,48 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    padding: 30px 15px;
+    box-shadow: var(--box-shadow);
+    background-color: var(--col-elements);
+    
+}
+
+.main {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.home {
+    color: var(--col-text);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.theme-switch {
+    color: var(--col-text);
+    background-color: transparent;
+    border: none;
+    font-size: .825rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: .25rem;
+    cursor: pointer;
+}
+
+.theme-switch span {
+    font-size: 1rem;
+}
+
+@media(min-width: 850px) {
+    nav {
+        padding: 1.25rem 4rem;
+    }
+    .home {
+        font-size: 1.125rem;
+    }
+}
